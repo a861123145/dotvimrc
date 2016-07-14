@@ -30,6 +30,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
@@ -227,7 +228,7 @@ if executable("ag")
 	let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
 
-let g:UseNumberToggleTrigger = 1
+let g:UseNumberToggleTrigger=1
 
 "colorscheme desert
 set t_Co=256
@@ -239,3 +240,11 @@ if has('gui_running')
 else
 	set background=dark
 endif
+
+" YouCompleteMe
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nmap <F4> :YcmDiags<CR>
