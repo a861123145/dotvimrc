@@ -1,6 +1,6 @@
 #!/bin/bash
 
 mkdir -p ~/.vim/bundle
-git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-ln -svf ${PWD}/_vimrc ~/._vimrc
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ln -svf ${PWD}/_vimrc ~/.vimrc
 vim +PluginInstall +qall
