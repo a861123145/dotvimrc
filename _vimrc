@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'godlygeek/csapprox'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'rkulla/pydiction'
@@ -31,7 +32,6 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
