@@ -12,7 +12,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'rkulla/pydiction'
-Plugin 'msanders/snipmate.vim'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-markdown'
@@ -30,6 +29,8 @@ Plugin 'thinca/vim-quickrun'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 
@@ -248,3 +249,12 @@ nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nmap <F4> :YcmDiags<CR>
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
