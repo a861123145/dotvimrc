@@ -7,8 +7,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
-Plugin 'godlygeek/csapprox'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'godlygeek/csapprox'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'tomasr/molokai'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'rkulla/pydiction'
@@ -231,16 +232,21 @@ endif
 
 let g:UseNumberToggleTrigger=1
 
-"colorscheme desert
-set t_Co=256
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
-if has('gui_running')
-	set background=light
-else
-	set background=dark
-endif
+" Color
+colorscheme desert
+"set t_Co=256
+"let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
+"if has('gui_running')
+"	set background=light
+"else
+"	set background=dark
+"endif
+
+"let g:molokai_original=1
+"let g:rehash256=1
+"colorscheme molokai
 
 " YouCompleteMe
 let g:ycm_error_symbol = '>>'
