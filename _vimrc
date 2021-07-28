@@ -35,6 +35,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'vim-scripts/autoload_cscope.vim'
 
 call vundle#end()
 
@@ -70,10 +71,11 @@ set textwidth=0
 set virtualedit=
 "设定 Tab 键缩进的空格数
 set tabstop=4
+set softtabstop=4
 "设定编辑器将多少空格视为一个缩进
 set shiftwidth=4
 "将缩进转换为空格
-"set expandtab
+set expandtab
 "设定自动缩进(新行与前一行缩进相同)
 set autoindent
 "set noautoindent
@@ -157,6 +159,8 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
+set tags=tags;/
+
 " " Taglist
 " "let Tlist_Ctags_Cmd='D:\ctags58\ctags.exe'
 " let Tlist_Show_One_File=1 "show current file only
@@ -217,6 +221,11 @@ endfunction
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+augroup XML
+    autocmd!
+    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+augroup END
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
